@@ -5,8 +5,13 @@ src/gz passwall_packages https://master.dl.sourceforge.net/project/openwrt-passw
 src/gz passwall2 https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-22.03/mips_24kc/passwall2
 ```
 
-#then run
+#then run to install passwall
 ```
+
 rm -f passwallx.sh && wget https://raw.githubusercontent.com/zeustm/Passwall/main/passwallx.sh && chmod 777 passwallx.sh && sh passwallx.sh
+```
+#then run to install xray
+```
+rm -f amirhossein.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 ```
 
