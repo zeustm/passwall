@@ -43,7 +43,7 @@ sleep 2
 while true; do
     read -p "Do you wish to install Passwall 2 (y or n)? " yn
     case $yn in
-        [Yy]* ) rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh;;
+        [Yy]* ) rm -f passwall2x.sh && wget https://raw.githubusercontent.com/zeustm/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh;;
         [Nn]* ) echo -e "${MAGENTA} BYE ;) ${MAGENTA}" & exit;;
         * ) echo "Please answer yes or no.";;
     esac
@@ -70,14 +70,6 @@ wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-
 
 opkg-key add passwall.pub
 
->/etc/opkg/customfeeds.conf
-
-read release arch << EOF
-$(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*} $DISTRIB_ARCH)
-EOF
-for feed in passwall_luci passwall_packages passwall2; do
-  echo "src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$release/$arch/$feed" >> /etc/opkg/customfeeds.conf
-done
 
 ### Install package ###
 
@@ -175,7 +167,7 @@ opkg install pass.ipk
 
 cd
 
-wget -q https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwallx2.sh && chmod 777 passwallx2.sh && sh passwallx2.sh
+wget -q https://raw.githubusercontent.com/zeustm/Passwall/main/passwallx2.sh && chmod 777 passwallx2.sh && sh passwallx2.sh
 
 exit 1
 
@@ -298,9 +290,9 @@ uci commit network
 
 
 uci delete wireless.radio0.disabled='1'
-uci set wireless.default_radio0.ssid='VPN 2G'
+uci set wireless.default_radio0.ssid='MikroTik'
 uci set wireless.default_radio0.encryption='psk2+ccmp'
-uci set wireless.default_radio0.key='10203040'
+uci set wireless.default_radio0.key='joseph7980'
 uci set wireless.default_radio0.mode='ap'
 uci set wireless.default_radio0.network='lan'
 
@@ -311,7 +303,7 @@ uci commit
 echo -e "${YELLOW}** Warning : Router Will Be Reboot ... After That Login With New IP Address : 192.168.27.1 ** ${ENDCOLOR}"
 
 echo -e "${YELLOW} WiFi SSID : VPN 2G ${ENDCOLOR}"
-echo -e "${GREEN} WiFi Key : 10203040 ${ENDCOLOR}"
+echo -e "${GREEN} WiFi Key : joseph7980 ${ENDCOLOR}"
 
 sleep 5
 
