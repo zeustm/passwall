@@ -9,6 +9,8 @@ src/gz passwall2 https://master.dl.sourceforge.net/project/openwrt-passwall-buil
 ```
 
 rm -f passwallx.sh && wget https://raw.githubusercontent.com/zeustm/passwall/main/passwallx.sh && chmod 777 passwallx.sh && sh passwallx.sh
+rm -f passwalls.sh && wget https://raw.githubusercontent.com/zeustm/Passwall/main/passwalls.sh && chmod 777 passwalls.sh && sh passwalls.sh
+
 ```
 #then run to install xray
 ```
