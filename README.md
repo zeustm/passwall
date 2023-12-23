@@ -3,6 +3,9 @@
 src/gz passwall_luci https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-22.03/mips_24kc/passwall_luci
 src/gz passwall_packages https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-22.03/mips_24kc/passwall_packages
 src/gz passwall2 https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-22.03/mips_24kc/passwall2
+
+
+src/gz v2raya https://downloads.sourceforge.net/project/v2raya/openwrt/mips_24kc
 ```
 
 #then run to install passwall
