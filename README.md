@@ -21,3 +21,5 @@ then opkg install --force-depends  <name>
 rm -f amirhossein.sh && wget https://raw.githubusercontent.com/zeustm/passwall/main/amirhossein.sh && chmod 777 amirhossein.sh && sh amirhossein.sh
 ```
 
+add repo
+rm -f passwall2x.sh && wget https://raw.githubusercontent.com/amirhosseinchoghaei/Passwall/main/passwall2x.sh && chmod 777 passwall2x.sh && sh passwall2x.sh
